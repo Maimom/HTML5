@@ -1,0 +1,14 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+  var storage = window.localStorage;
+  if (!storage.pageLoadCount) storage.pageLoadCount = 0;
+  storage.pageLoadCount = parseInt(storage.pageLoadCount, 10) + 1;
+ document.write("You have visited this page " +storage.pageLoadCount + " times");
+</script> 
+
+</body>
+</html>

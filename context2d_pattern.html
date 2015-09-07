@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+<img id="image" src="http://maimom.net/invite/favicon.ico">
+<canvas id="canvas">
+  Browser support not available
+</canvas>
+<script>
+  var canvas = document.getElementById("canvas");
+  var context = canvas.getContext("2d");
+  var imgage = document.getElementById("image")
+  var pattern = context.createPattern(image, 'repeat');
+  context.rect(0, 0, 160, 112);
+  context.fillStyle = pattern;
+  context.fill();
+</script>
+
+</body>
+</html>

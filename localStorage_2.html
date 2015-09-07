@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+var Bike= {};
+Bike.wheels = 2;
+Bike.LookingMirror = 2;
+Bike.Horn = "Honk";
+Bike.name = "Yamaha Alpha";
+localStorage.setItem( "Bike", JSON.stringify(Bike));
+var B= localStorage.Bike; 
+document.write(B);
+</script>
+
+</body>
+</html>

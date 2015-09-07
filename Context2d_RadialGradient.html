@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="canvas" width="400" height="400">
+  Browser support not available
+</canvas>
+<script>
+  var canvas = document.getElementById("canvas");
+  var context = canvas.getContext("2d");
+  var gradient=context.createRadialGradient(100,100,10,100,60,100);
+  gradient.addColorStop(0,"green");
+  gradient.addColorStop(1,"white");
+  context.fillStyle=gradient;
+  context.fillRect(20,20,150,100); 
+</script>
+
+</body>
+</html>

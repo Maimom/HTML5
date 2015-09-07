@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>  
+navigator.geolocation.getCurrentPosition(fx);
+function fx(pos){
+document.write("Latidude : " + pos.coords.latitude 
++ "<br>Longitude :" + pos.coords.longitude
++ "<br>Accuracy :" + pos.coords.accuracy  
++ "<br>Altitude:" + pos.coords.altitude
++ "<br>Heading:" + pos.coords.heading
++ "<br>Altitude Accuracy:" + pos.coords.altitudeAccuracy
++ "<br>speed:"+ pos.coords.speed
++ "<br>timestamp:" + pos.coords.timestamp);
+}
+</script>
+</body>
+</html>

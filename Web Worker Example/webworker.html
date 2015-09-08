@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<body onload="InitiateWorker()">
+    <script>
+        var ojbWorker;
+        var stsbar = '';
+        var status = 0;
+        function InitiateWorker() {
+            if (typeof (Worker) !== "undefined") {
+                ojbWorker = new Worker("workers.js");
+                ojbWorker.onmessage = function (event) {
+                    status = event.data;
+                    if (status > 100) {
+                        ojbWorker.terminate();
+                        ojbWorker = 'undefined';
+                    }
+                    else {
+                        stsbar = stsbar + "|";
+                        document.getElementById("status").innerHTML = stsbar + " " + status + " %"
+                    }
+                }
+            }
+            else {
+                document.getElementById("status").innerHTML = "Web Worker not supported"
+            }
+        }
+    </script>
+    <p><b>Completion Status </b>: <span id="status"></span></p>
+</body>
+</html>
